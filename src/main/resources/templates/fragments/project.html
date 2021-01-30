@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<div th:fragment="project">
+		<div class="card">
+			<img th:src="${data.imageSource}" class="card-img-top" th:alt="${data.name}">
+			<div class="card-body">
+				<h5 class="card-title" th:text="${data.name}"></h5>
+				<p class="card-text" th:text="${data.summary}">$</p>
+				<a th:href="${data.url}" class="btn btn-primary" target="_blank">Details</a>
+			</div>
+		</div>
+	</div>
+</html>

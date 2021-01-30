@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="fragments/head :: head"></head>
+	<body style="animation: alternate">
+		<header th:replace="fragments/header :: header"></header>
+		<main role="main">
+			<div class="container">
+				<div class="jumbotron text-center">
+					<h1 class="display-4">Kemal Abdić</h1>
+					<p class="lead">Junior Java Developer &middot; Sarajevo, Bosnia and Herzegovina</p>
+					<p><img alt="Kemal Abdić" height="320" src="images/abdickemal.jpg" width="312"></p>
+					<hr class="my-4">
+					<p>I'm just getting started so project list will be empty for a while.</p>
+					<div class="card-deck">
+						<div class="col-md-3" th:each="data : ${projects}"
+						     th:include="fragments/project :: project"
+						     th:with="data=${data}">
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer th:replace="fragments/footer :: footer">
+		</footer>
+	</body>
+</html>
