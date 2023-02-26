@@ -7,8 +7,6 @@ public class Project {
     private String imageSource;
     private String url;
 
-
-
     public String getName() {
         return name;
     }

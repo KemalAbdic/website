@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-	<body>
-		<footer th:fragment="footer">
-			<div class="container text-muted">
-				<hr>
-				<p class="float-right">
-					<a href="#">Back to top</a>
-				</p>
-				<p>Kemal Abdić &middot;
-					<a href="/contact">Contact</a>
-				</p>
-			</div>
-		</footer>
-	</body>
+<body>
+<footer th:fragment="footer" th:remove="tag">
+    <div class="container text-muted">
+        <hr th:remove="tag">
+        <p class="float-right">
+            <a href="#">Back to top</a>
+        </p>
+        <p>Kemal Abdić &middot; <a href="/contact">Contact</a></p>
+    </div>
+</footer>
+</body>
 </html>
