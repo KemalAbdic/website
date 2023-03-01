@@ -7,13 +7,16 @@
     <div class="container">
         <div class="jumbotron text-center">
             <h1 class="display-4">Kemal Abdić</h1>
-            <p class="lead">Junior Java Developer &middot; Sarajevo, Bosnia and Herzegovina</p>
+            <p class="lead">Software Engineer @ <a href="https://olivebh.com/">OliveBH</a> &middot; Sarajevo, Bosnia and
+                Herzegovina</p>
             <p><img alt="Kemal Abdić" height="320" src="images/abdickemal.jpg" width="312"></p>
             <hr class="my-4">
-            <p>I'm just getting started so project list will be empty for a while.</p>
-            <div class="card-deck">
+            <p></p>
+            <div class="card-deck d-flex justify-content-center">
                 <div class="col-md-3" th:each="data : ${projects}"
-                     th:replace="fragments/project :: project(data=${data})"></div>
+                     th:include="fragments/project :: project"
+                     th:with="data=${data}">
+                </div>
             </div>
         </div>
     </div>

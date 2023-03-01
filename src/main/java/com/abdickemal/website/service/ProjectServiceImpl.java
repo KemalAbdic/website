@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class ProjectServiceImpl implements ProjectService{
+public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public List<Project> getAllProjects() {
@@ -21,14 +21,15 @@ public class ProjectServiceImpl implements ProjectService{
 
         Project p2 = new Project();
         p2.setName("Historical Social Ego-network Analysis");
-        p2.setSummary("Gephi, GraphML, CSV, OmicsNet");
+        p2.setSummary("Gephi, GraphML, CSV");
         p2.setImageSource("/images/historical_social_network_analysis.png");
         p2.setUrl("https://www.omicsnet.ca/OmicsNet/faces/Share?ID=_5v481rm7f");
 
         Project p3 = new Project();
-        p3.setName("Auction app made for AtlantBH Full-Stack Webdev internship");
+        p3.setName("Auction App");
         p3.setSummary("Java, Spring Boot, React.js, Axios, Heroku, Cloudinary");
-        p3.setUrl("images/demo_image.png");
+        p3.setImageSource("images/demo_image.png");
+        p3.setUrl("https://github.com/KemalAbdic/AuctionApp");
 
         projects.add(p1);
         projects.add(p2);
